@@ -48,6 +48,18 @@ const SelfPic = styled.img`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
 
+const StyledLink = styled.a`
+  color: #206042;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #1a4d35;
+    text-decoration: underline;
+  }
+`;
+
 const AboutPage: React.FC = () => (
     <Wrapper>
         <Main>
@@ -55,8 +67,11 @@ const AboutPage: React.FC = () => (
             <AboutMe>
                 Hello! My name is Matthew McGarry. I am a web developer currently living in
                 Cleveland, Ohio. In my free time I like bike riding, concerts, and playing
-                games such as Dota 2, MTG Arena, and Dota 2.
-            </AboutMe>
+                games such as Dota 2, World of Warcraft, and MTG Arena. Feel free to check out my{" "}
+               <StyledLink href="https://github.com/mmcgarry13" target="_blank" rel="noopener noreferrer">
+                GitHub
+                </StyledLink>.
+             </AboutMe>
             <ImageContainer>
                 <SelfPic src={picOfMe} alt="Matthew in Taiwan" />
             </ImageContainer>
